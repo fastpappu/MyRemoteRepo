@@ -7,14 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DWOlist.page</title>
 </head>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka+One&family=Mitr:wght@300&family=Passion+One&display=swap');
-  
-  .container {
-    max-width: auto;
-    margin: 0 auto;
-  }
 
+<style>
+  /* added google font family to the page */
+  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka+One&family=Mitr:wght@300&family=Passion+One&display=swap');
+  /* added styling to the container whole page contain */ 
+  .container {
+    width: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  /*header styling to this page header*/
   #mast {
     width: 100%;
     height: 200px;
@@ -25,10 +28,11 @@
     font-weight: bolder;
     font-size: 28px;
     color: white;
+    margin: auto;
   }
-
+  /* style to the section page middle page of this site*/
   .section {
-    min-height: 700px;
+    height: 700px;
     border: 1px solid #ddd;
     background-color: aliceblue;
     background-image: url(https://images.unsplash.com/photo-1643808889846-f8c08346d358?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80), url(https://media.istockphoto.com/photos/taekwondo-karate-teenager-athlete-kick-punch-black-background-picture-id1284837366?b=1&k=20&m=1284837366&s=170667a&w=0&h=go2RC2zWY2IwpgtxcjClMRHmgLKShCG1ez9m0S0jonk=);
@@ -36,7 +40,7 @@
     background-size: cover;
     background-blend-mode: hard-light;
   }
-
+  /* style the box includes the form styling and content*/
   #box {
     display: flex;
     height: 400px;
@@ -47,32 +51,32 @@
     text-align: left;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 10px 10px 5px 2px #B667F1;
+    box-shadow: 10px 10px 5px 2px black;
+    background-size: cover;
   }
-
+  /* added animation to name of the page*/
   #h1DIV {
     animation: mymove 5s ease-in-out infinite;
   }
-
+  /* shadow effect by using keyframe properties ease-in-out effect*/ 
   @keyframes mymove {
     50% {
-      text-shadow: 0px 3px 20px black;
+      text-shadow: 0px 3px 20px red;
     }
   }
-
+  /* adding style to heading 2*/
   .h2 {
-    color:#ff00ff;
+    color: #2600ff;
     font-family: 'Passion One', cursive;
-    font-size: 50px;
   }
-
+  /*styling the form content of the box*/
   form {
     margin: 10%;
     font-family: 'Mitr', sans-serif;
     font-weight: bold;
     font-size: 20px;
   }
-
+  /* styling the input fields of the form*/
   input[type=text],
   [type=password],
   [type=date],
@@ -84,7 +88,7 @@
     font-family: sans-serif;
     font-size: 16px;
   }
-
+  /*style of submit button*/
   input[type=submit] {
     width: 50%;
     background-color: #4CAF50;
@@ -95,43 +99,31 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 18px;
-    text-align: center;
   }
-
+  /* hover effect to submit button */
   input[type=submit] :hover {
     background-color: #45a049;
   }
-
+  /* styling to dropdown menu of the form */
   .dropdown {
     background-color: white;
     font-family: sans-serif;
     font-size: 16px;
   }
-
-  @media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
+  
 </style>
 
 <body>
-  <div class="container" style="overflow:auto">
-    <header id="mast">
+  <div class="container">
+    <header id="mast" class="header">
       <div id="h1DIV">
         <h1>DUEL WORLD ORGANIZATION</h1>
         <h2 class="h2">Black Belt List</h2>
       </div>
-      <div class="img">
-        <img
-          src="https://static.wixstatic.com/media/5f6fd3_747d89ca3b344e339f157a7c85a35745~mv2.png/v1/fill/w_232,h_210,al_c,q_85,usm_0.66_1.00_0.01/png4.webp"
-          alt="logo">
-      </div>
     </header>
-    <section class="section" id="section">
+    <section class="section" id="section" style="transform: rotate3d(360deg);">
       <div id="main" class="main">
-        <div id="box" class="box">
+        <div id="box" class="box">  
           <form action="table.html" method="post">
             <label for="Username">Username</label></br>
             <input type="text" id="Username" placeholder="Enter Username" required></br>
