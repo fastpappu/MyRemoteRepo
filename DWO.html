@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <a href="table.html"></a>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DWOlist.page</title>
 </head>
 
@@ -148,7 +147,7 @@
             <label for="Date of Birth"> Date of Birth</label></br>
             <input type="date" id="Date of birth" required></br>
             <label for="country name">Select Country</label></br>
-            <select name="country" id="country" class="dropdown" required>
+            <select name="country" id="country" class="dropdown">
               <option>select country</option>
               <option value="AF">Afghanistan</option>
               <option value="AX">Aland Islands</option>
@@ -402,7 +401,7 @@
               <option value="YE">Yemen</option>
               <option value="ZM">Zambia</option>
               <option value="ZW">Zimbabwe</option>
-            </select required><br>
+            </select><br>
             <br><input type="submit" class="submit">
           </form>
         </div>
@@ -440,7 +439,20 @@
       </div>
     </footer>
   </div>
-  <script></script>
+  <script>
+    var section=document.querySelectorAll('.section');
+    var sections={};
+    section.forEach(function(e){
+      console.log(e.id , e.offsetTop);
+      sections[e.id]=e.offsetTop;
+    })
+    console.log(section)
+    window.onscroll=function(){
+    var scrollPos=document.documentElement.scrollTop||
+    document.body.scrollTop;
+      console.log(scrollPos)
+    }
+  </script>
 </body>
 
 </html>
