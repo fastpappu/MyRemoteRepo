@@ -14,19 +14,21 @@
     font-weight: bolder;
     font-size: 28px;
     color: white;
-    margin: auto;
+    margin: 0;
     padding: 5%;
+    display: flexbox;
+    align-items: center;
   }
   /* style to the section page middle page of this site*/
   .section {
     height: 800px;
-    border: 1px solid #ddd;
     background-color: aliceblue;
     background-image: url(https://images.unsplash.com/photo-1643808889846-f8c08346d358?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80), url(https://media.istockphoto.com/photos/taekwondo-karate-teenager-athlete-kick-punch-black-background-picture-id1284837366?b=1&k=20&m=1284837366&s=170667a&w=0&h=go2RC2zWY2IwpgtxcjClMRHmgLKShCG1ez9m0S0jonk=);
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: hard-light;
+    background-blend-mode: hard-light, darken;
     padding: 0%;
+    display: flex;
   }
   /* style the box includes the form styling and content*/
   #box {
@@ -35,24 +37,24 @@
     width: 400px;
     background-color: #ECC488;
     border: none;
-    margin: 10% 10% 10%;
+    margin: 30% 40%;
     text-align: left;
     border-radius: 20px;
-    box-shadow: 10px 10px 5px 2px black;
+    box-shadow: 10px 10px 2px black;
     background-size: cover;
   }
   /* added animation to name of the page*/
-  #h1DIV {
+  #h1DIV:first-child {
     animation: mymove 5s ease-in-out infinite;
   }
   /* shadow effect by using keyframe properties ease-in-out effect*/ 
   @keyframes mymove {
     50% {
-      text-shadow: 0px 3px 20px red;
+      text-shadow: 0px 3px 20px black;
     }
   }
   /* adding style to heading 2*/
-  .h2 {
+  .h2:second-child {
     color: #2600ff;
     font-family: 'Passion One', cursive;
   }
@@ -81,7 +83,7 @@
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -90,6 +92,7 @@
   /* hover effect to submit button */
   input[type=submit] :hover {
     background-color: #45a049;
+    align-items: center;
   }
   /* styling to dropdown menu of the form */
   .dropdown {
@@ -98,9 +101,9 @@
     font-size: 16px;
   }
   #footer {
-    background-color: black;
+    background-color: rgb(66, 46, 46);
     color: white;
-    padding: 10%;
+    padding: 5%;
     font-style: normal;
     font-weight: bold;
     font-family: sans-serif;
@@ -113,4 +116,47 @@
     width: 30%;
     display: inline-block;
     text-decoration: none;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  /* adding style to table rows*/
+  th {
+    border: 3px solid rgb(0, 0, 0);
+    font-family: Mitr;
+    background-color: rgb(25, 0, 255);
+    border-radius: 5px;
+    color: white;
+  }
+
+  /* added style to table */
+  table {
+    border: 2px solid black;
+    background-color: rgb(140, 128, 248);
+    table-layout: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  td {
+    border: 2px solid rgb(7, 7, 7);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .active {
+    background-color: rgb(9, 248, 9);
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+  }
+  .active:hover {
+    background-color: darkgreen;
+  }
+  li {
+    list-style-type: none;
   }
