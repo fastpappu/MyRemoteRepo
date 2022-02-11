@@ -11,16 +11,10 @@
 
 <body>
   <div class="container">
-    <header id="mast" class="header">
-      <div id="h1DIV">
-        <h1>DUEL WORLD ORGANIZATION</h1>
-        <h2 class="h2">Black Belt List</h2>
-      </div>
-    </header>
-    <section class="section" id="section" style="transform: rotate3d(360deg);">
+    <section class="section" id="section">
       <div id="main" class="main">
         <div id="box" class="box">  
-          <form action="table.html" method="post">
+          <form action="" method="post" id="form">
             <label for="Username">Username</label></br>
             <input type="text" id="Username" placeholder="Enter Username" required></br>
             <label for="Password">Password</label></br>
@@ -283,56 +277,21 @@
               <option value="ZM">Zambia</option>
               <option value="ZW">Zimbabwe</option>
             </select><br>
-            <br><input type="submit" class="submit">
+            <br><input type="submit" value="submit" class="submit">
           </form>
         </div>
-      </div>
+      </div>  
     </section>
-    <footer id="footer">
-      <div>
-        <div class="col-1">
-          <p>
-            &copy; DWO Organization Reserved All Copy rights of publishing the page
-          </p>
-        </div>
-        <div class="col-2">
-          <ul>
-            <li class="anchor">
-              <a href="">Home Page</a>
-            </li>
-            <li class="anchor">
-              <a href="">Donation</a>
-            </li>
-            <li class="anchor">
-              <a href="">Join Us</a>
-            </li>
-            <li class="anchor">
-              <a href="">Apply For Application</a>
-            </li>
-            <li class="anchor">
-              <a href="">Contact Us</a>
-            </li>
-            <li class="anchor">
-              <a href="">Email Us</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-  </div>
   <script>
-    var section=document.querySelectorAll('.section');
-    var sections={};
-    section.forEach(function(e){
-      console.log(e.id , e.offsetTop);
-      sections[e.id]=e.offsetTop;
+    var form = document.getElementById('form')
+    form.addEventListener('submit', function(event){
+      event.preventDefault()
+
+      var Username = document.getElementById('username').value
+
+      console.log(username)
+
     })
-    console.log(section)
-    window.onscroll=function(){
-    var scrollPos=document.documentElement.scrollTop||
-    document.body.scrollTop;
-      console.log(scrollPos);
-    }
   </script>
 </body>
 
