@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka+One&family=Mitr:wght@300&family=Passion+One&display=swap");
 
 /* added styling to the container whole page contain */
-.container{
+.container {
   height: 0 auto;
   width: 0 auto;
   display: block;
@@ -75,8 +75,8 @@ input[type="submit"] :hover {
   font-family: sans-serif;
   font-size: 16px;
 }
-
-*{
+/* styling the taable */
+* {
   box-sizing: border-box;
 }
 /*adding style to table rows table design*/
@@ -96,7 +96,7 @@ table {
   width: 100%;
   text-align: center;
 }
-
+/* style added to table data */
 td {
   border: 2px solid rgb(7, 7, 7);
   font-family: Arial, Helvetica, sans-serif;
@@ -104,7 +104,7 @@ td {
   border-radius: 5px;
   font-weight: bold;
 }
-
+/* style added to class in background for status */
 .active {
   background-color: rgb(9, 248, 9);
   color: white;
